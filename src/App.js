@@ -1,14 +1,17 @@
 import './App.css'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/Home';
-import UVA1 from './pages/UVA1';
 import PySano from './pages/PySano';
+import UVA1 from './pages/UVAS-PYSANO/UVA1';
+import UVA1_AULA from './pages/UVAS-AULA/UVA1';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path="/UVA1" element={<UVA1_AULA/>}/>
         <Route path='/PySano' element={<PySano/>}/>
+        <Route path='/PySano/UVA1' element={<UVA1/>}/>
       </Routes>
     </Router>
   );

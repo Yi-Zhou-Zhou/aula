@@ -101,7 +101,9 @@ const Home = () => {
                             Informacion General
                         </li>
                         <li className='clickable'>
+                            <a href='/UVA1'>
                             Unidad 1
+                            </a>
                         </li>
                         <li className='clickable'>
                             Unidad 2

@@ -112,9 +112,7 @@ const UVA1 = () => {
                             Unidad 2
                         </li>
                         <li className='clickable'>
-                            <a href='/UVA3'>
                             Unidad 3
-                            </a>
                         </li>
                         <li className='clickable'>
                             Unidad 4

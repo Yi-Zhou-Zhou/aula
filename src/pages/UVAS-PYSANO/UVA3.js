@@ -1,39 +1,37 @@
-import React from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import { Table } from '@mantine/core';
+import axios from 'axios';
+import { UserContext } from '../../context/user/UserContext';
 
-const UVA3 = () => {
+const UVA1 = () => {
 
-  const elements = [
-  {
-    id: "1",
-    name: "String reverso",
-    tags: "strings, ciclos",
-    rating: "600",
-    recommended: "Recomendado",
-    done: "No"
-  },
-  {
-    id: "0",
-    name: "Hello World",
-    tags: "strings",
-    rating: "200",
-    recommended: "Fácil",
-    done: "No"
-  },
-  
-]
+  const [questions, setQuestions] = useState([]);
+  const {user} = useContext(UserContext);
 
-  const rows = elements.map((element) => (
-    <tr key={element.id}>
-      <a href={"/PySano/UVA1" + element.id}>
+  useEffect(() => {
+    const fetchdata = async () => {
+      const result = await axios.get('http://127.0.0.1:8000', {
+        params: {
+          student: user.rol,
+          uva: 3
+        }
+      });
+      setQuestions(result.data);
+    }
+    fetchdata();
+  }, [user]);
+
+  const rows = questions.map((question) => (
+    <tr key={question.id}>
+      <a href={"/PySano/UVA1/" + question.id}>
         <td className='table-name-tag'>
-        <span className='table-name'>{element.name}</span>
-        <span className='table-tags'>tags: {element.tags}</span>
+        <span className='table-name'>{question.title}</span>
+        <span className='table-tags'>tags: {question.category_info}</span>
         </td>
       </a>
-      <td className={element.rating <= 200 ? "table-rating-easy": "table-rating-medium"}>{element.rating}</td>
-      <td>{element.recommended}</td>
-      <td> {element.done}</td>
+      <td className={question.difficulty <= 200 ? "table-rating-easy": "table-rating-medium"}>{question.difficulty}</td>
+      <td>{question.recommended}</td>
+      <td> {question.done}</td>
     </tr>
   ));
 
@@ -73,4 +71,4 @@ const UVA3 = () => {
   )
 }
 
-export default UVA3
+export default UVA1

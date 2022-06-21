@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from '@mantine/core';
+const axios = require('axios');
 
 const UVA1 = () => {
 
@@ -22,6 +23,21 @@ const UVA1 = () => {
   },
   
 ]
+
+
+const req = axios
+  .get('http://127.0.0.1:8000/',{
+    params: {
+      student: "201873081-0",
+      uva: 1
+    }
+  })
+  .then(res => {
+    console.log(res);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
   const rows = elements.map((element) => (
     <tr key={element.id}>

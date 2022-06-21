@@ -3,7 +3,6 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
@@ -129,12 +128,14 @@ box-shadow: 5px 5px 15px 1px #B2B2B2;
   font-size: 2.34375rem;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-title-footer{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-steps span:not(:first-child){
@@ -227,6 +228,7 @@ box-shadow: 5px 5px 15px 1px #B2B2B2;
   border-bottom: 2px solid rgb(213, 227, 232);;
   margin-top: 1rem;
   flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 1rem;
 
 }
@@ -242,6 +244,7 @@ box-shadow: 5px 5px 15px 1px #B2B2B2;
 
 
 .hero-info-container{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width:92%;
   margin: auto;
 }
@@ -269,6 +272,11 @@ box-shadow: 5px 5px 15px 1px #B2B2B2;
   margin-bottom: 0.9rem;
 }
 
+.hero-info-content{
+  margin-bottom: 0.9rem;
+  font-size: 13px !important;
+  color: rgb(21, 68, 102) !important;
+}
 .hero-links{
   margin-left: 0.8rem;
 }
@@ -331,6 +339,7 @@ Navbar
 
 
 .navbar-pysano{
+  font-family: 'Poppins', sans-serif;
     height: 9vh;
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -344,6 +353,11 @@ Navbar
 .uva-link{
   color: white;
   font-size: 20px;
+  padding: 0.2rem;
+}
+
+.uva-link:hover{
+  border-bottom: 2px solid white;
 }
 
 
@@ -502,4 +516,57 @@ Main content
 
 .mt-2{
   margin-top: 1.4rem;
+}
+
+.video-container{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-results{
+  color: rgb(21, 68, 102)!important;
+  
+  font-size: 13px !important;
+  font-weight: bolder;
+  margin-bottom: 0.8rem;
+}
+
+.table-content{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+.table-name-tag{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+}
+
+.table-tags{
+  color: rgb(105, 105, 105);
+}
+
+.table-name{
+  font-weight: bold;
+}
+
+.table-rating-easy{
+  color: rgb(2, 188, 2);
+  font-weight: 600;
+}
+
+.table-rating-medium{
+  color: rgb(220, 220, 0);
+  font-weight: 600;
+}
+
+.table-header{
+  font-weight: 600;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
 }

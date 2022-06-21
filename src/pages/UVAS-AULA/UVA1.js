@@ -19,6 +19,7 @@ import heroResourcesImg from "../../imgs/04-recursos.png"
 import heroEvalImg from "../../imgs/06-evaluaciones.png"
 import {BsListUl} from "react-icons/bs"
 import {GoBook} from "react-icons/go"
+import Unidad1 from "../../imgs/Unidad1.png"
 const UVA1 = () => {
   return (
     <>
@@ -109,7 +110,9 @@ const UVA1 = () => {
                             </a>
                         </li>
                         <li className='clickable'>
+                            <a href='/UVA2'>
                             Unidad 2
+                            </a>
                         </li>
                         <li className='clickable'>
                             <a href='/UVA3'>
@@ -145,25 +148,23 @@ const UVA1 = () => {
                         </li>
                     </ul>
                     <div className='hero-info-container'>
-                        <div className='hero-header-img-uva' alt='Hero Header Image'>
-                            <p>Unidad 1</p>
-                        </div>
+                        <img src={Unidad1} alt="Unidad1-logo" className='hero-info-img' />
                         <img src={heroResultsImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='hero-info-details'>
                             <ul className='hero-info-group hero-info-group2'>
-                                <li>1. Describir el proceso de transformación que lleva a cabo un algoritmo, desde un estado inicial hasta un estado final. </li>
-                                <li>2. Enumerar las características que debe tener un algoritmo. </li>
-                                <li>3. Implementar programas simples de gráficos de tortuga utilizando un lenguaje de bloques y distintas formas de control de flujo y funciones.</li>
+                                <li className='hero-results'>1. Describir el proceso de transformación que lleva a cabo un algoritmo, desde un estado inicial hasta un estado final. </li>
+                                <li className='hero-results'>2. Enumerar las características que debe tener un algoritmo. </li>
+                                <li className='hero-results'>3. Implementar programas simples de gráficos de tortuga utilizando un lenguaje de bloques y distintas formas de control de flujo y funciones.</li>
                             </ul>
                         </div>
                         <img src={heroContentsImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='hero-info-details'>
                             <ul>
-                                <li className='hero-info-group2'>– Problemas, estados y algoritmos.</li>
-                                <li className='hero-info-group2'>– Programas secuenciales con gráficos de tortuga en Trinket.</li>
-                                <li className='hero-info-group2'>– Ciclos.</li>
-                                <li className='hero-info-group2'>– Variables y asignación.</li>
-                                <li className='hero-info-group2'>– Funciones y parámetros.</li>
+                                <li className='hero-info-content'>– Problemas, estados y algoritmos.</li>
+                                <li className='hero-info-content'>– Programas secuenciales con gráficos de tortuga en Trinket.</li>
+                                <li className='hero-info-content'>– Ciclos.</li>
+                                <li className='hero-info-content'>– Variables y asignación.</li>
+                                <li className='hero-info-content'>– Funciones y parámetros.</li>
                             </ul>
                         </div>
                         <img src={heroResourcesImg} className='hero-info-img' alt='Hero Information Image'/>

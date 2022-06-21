@@ -19,7 +19,10 @@ import heroResourcesImg from "../../imgs/04-recursos.png"
 import heroEvalImg from "../../imgs/06-evaluaciones.png"
 import {BsListUl} from "react-icons/bs"
 import {GoBook} from "react-icons/go"
-const UVA3 = () => {
+import Unidad2 from "../../imgs/Unidad2.png"
+import CapsulasVideo from "../../imgs/Capsulas.png"
+
+const UVA2 = () => {
   return (
     <>
     <nav className='navbar'>
@@ -108,12 +111,12 @@ const UVA3 = () => {
                             Unidad 1
                             </a>
                         </li>
-                        <li className='clickable'>
+                        <li className='active clickable'>
                             <a href="/UVA2">
                             Unidad 2
                             </a>
                         </li>
-                        <li className='active clickable'>
+                        <li className='clickable'>
                             <a href='/UVA3'>
                             Unidad 3
                             </a>
@@ -147,61 +150,74 @@ const UVA3 = () => {
                         </li>
                     </ul>
                     <div className='hero-info-container'>
-                        <div className='hero-header-img-uva' alt='Hero Header Image'>
-                            <p>Unidad 3</p>
-                        </div>
+                        <img src={Unidad2} alt="Unidad1-logo" className='hero-info-img' />
                         <img src={heroResultsImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='hero-info-details'>
                             <ul className='hero-info-group hero-info-group2'>
-                                <li className='hero-results'>1. En el contexto de un problema, expresar una condición lógica que modele una situación particular, a partir de comparaciones y operadores lógicos.  </li>
-                                <li className='hero-results'>2. Organizar la lógica de decisiones de un programa en Python entorno a decisiones simples, dobles, en cascada o anidadas, según sea necesario. </li>
-                                <li className='hero-results'>3. Ser capaz de dar seguimiento (ruteo) a un programa o algoritmo que comprenda decisiones. </li>
-                                <li className='hero-results'>4. Resolver problemas en Python a partir de un enunciado en lenguaje natural, a través de algoritmos que deban tomar decisiones simples o dobles, expresando adecuadamente la condición que permite decidir. </li>
+                                <li className='hero-results'>1. Efectuar cálculos aritméticos con variables y operandos literales, tanto enteros como reales, desde la consola de Python.</li>
+                                <li className='hero-results'>2. Escribir programas de flujo secuencial en Python que reciban entradas y generen salidas.</li>
+                                <li className='hero-results'>3. Resolver problemas especificados en lenguaje natural mediante programas en Python que hagan cálculos matemáticos utilizando los operadores básicos y funciones predefinidas de biblioteca, almacenando operandos y resultados en variables y aplicando conversión de tipos (casting) cuando es necesario.</li>
                             </ul>
                         </div>
                         <img src={heroContentsImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='hero-info-details'>
                             <ul>
-                                <li className='hero-info-content'>– Operadores de comparación.</li>
-                                <li className='hero-info-content'>– Condiciones lógicas y operadores lógicos. </li>
-                                <li className='hero-info-content'>– Decisiones con un único camino: if.</li>
-                                <li className='hero-info-content'>– Decisiones con dos caminos: if - else.</li>
-                                <li className='hero-info-content'>– Decisiones en cascada: if - elif- else.</li>
-                                <li className='hero-info-content'>– Decisiones anidadas.</li>
-                                <li className='hero-info-content'>– Ruteo de programas con flujo condicional.</li>
+                                <li className='hero-info-content'>– Introducción a Python</li>
+                                <li className='hero-info-content'>– Tipos de datos, variables operadores y expresiones.</li>
+                                <li className='hero-info-content'>– Entrada y salida</li>
+                                <li className='hero-info-content'>– Programas con flujo secuencial</li>
+                                <li className='hero-info-content'>– Funciones predefinidas y de biblioteca</li>
                             </ul>
                         </div>
                         <img src={heroResourcesImg} className='hero-info-img' alt='Hero Information Image'/>
+                        <div className='link-section'>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="/PySano/UVA2">PySano</a>
+                        </div>  
                         <div className='hero-info-details'>
-                            <div className='link-section'>
-                                    <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="/PySano/UVA3">PySano</a>
-                            </div>
+                            <img src={CapsulasVideo} alt="Capsulas-video-logo"/>
                         </div>
                         <div className='hero-info-details'>
                             <div className='link-section'>
-                                    <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Condicionales - Introducción</a>
+                                    <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python</a>
+                            </div>
+                            <div className='link-section'>
+                                    <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Datos, tipos y expresiones</a>
                             </div>
                             <div className='hero-info-details link-section'>
-                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Condiciones lógicas</a>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Introducción </a>
                             </div>
                         </div>
                         <div className='hero-info-details'>
                             <div className='link-section'>  
-                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Condicionales - Control de Flujo</a>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Variables</a>
+                            </div>
+                            <div className='link-section'>  
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Variables: Asignación y nombres</a>
                             </div>
                             <div className='hero-info-details link-section'>
-                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Condicional (Instrucción if)</a>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Variables y asignación</a>
                             </div>
                         </div>
                         <div className='hero-info-details'>
-                            <div className='link-section'>  
-                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Condicionales - Ejercicio</a>
-                            </div>
-                            <div className='hero-info-details link-section'>
-                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Solución de problemas con decisiones</a>
+                        <div className='link-section'>  
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Programa 1</a>
+                        </div>
+                        <div className='link-section'>  
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Programa 2</a>
+                        </div>
+                        <div className='link-section'>  
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Programa 3</a>
+                        </div>
+                        <div className='link-section'>  
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Programa 4</a>
+                        </div>
+                        <div className='hero-info-details link-section'>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Python - Programas secuenciales</a>
                             </div>
                         </div>
-                     
+                        <div className='link-section'>
+                            <img src='https://aula.usm.cl/theme/image.php/moove/page/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Prepárate para usar SMOJ</a>
+                        </div>
                         <div className='link-section'>
                             <img src='https://aula.usm.cl/theme/image.php/moove/folder/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Material por paralelo</a>
                         </div>
@@ -209,19 +225,37 @@ const UVA3 = () => {
                             <img src='https://aula.usm.cl/theme/image.php/moove/folder/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="#">Documentos complementarios</a>
                         </div>
                         <img src={heroActivityImg} className='hero-info-img' alt='Hero Information Image'/>
-                        <div className='hero-info-details'>
                             <div className='link-section'>
-                                    <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a className='inactive' href="#">Control 3</a>
+                                    <img src='https://aula.usm.cl/theme/image.php/moove/quiz/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a className='inactive' href="#">Control 2</a>
                             </div>
+                            <div className='hero-info-details'>
+                                <span className='restricted'>Restringido</span>
+                                <span> No disponible hasta que cualquiera de:</span>
+                                <ul>
+                                    <li className='activity-list'>Antes de 21 de marzo de 2022, 09:30</li>
+                                    <li className='activity-list'>Antes de 21 de marzo de 2022, 10:50</li>
+                                    <li className='activity-list'>Antes de 21 de marzo de 2022, 12:10</li>
+                                    <li className='activity-list'>Antes de 21 de marzo de 2022, 13:30</li>
+                                    <li className='activity-list'>Antes de 22 de marzo de 2022, 09:35</li>
+                                    <li className='activity-list'>Antes de 22 de marzo de 2022, 10:55</li>
+                                    <li className='activity-list'>Antes de 23 de marzo de 2022, 08:45</li>
+                                    <li className='activity-list'>Antes de 23 de marzo de 2022, 10:05</li>
+                                    <li className='activity-list'>Antes de 23 de marzo de 2022, 11:25</li>
+                                    <li className='activity-list'>Antes de 23 de marzo de 2022, 12:45</li>
+                                    <li className='activity-list'>Antes de 24 de marzo de 2022, 15:00</li>
+                                    <li className='activity-list'>Antes de 22 de marzo de 2022, 18:25</li>
+                                    <li className='activity-list'>Antes de 22 de marzo de 2022, 13:15</li>
+                                </ul>
+
                         </div>
                         <img src={heroEvalImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='hero-info-details'>
                             <span className=' bold'>Evaluaciones a realizar en periodos de modalidad online</span>
-                        <div className='hero-info-details link-section mt-2'>
-                        <img src='https://aula.usm.cl/theme/image.php/moove/assign/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="/PySano/UVA1">Tarea 3 - Decisiones</a>
+                        <div className='hero-info-details link-section mt-2'>   
+                            <img src='https://aula.usm.cl/theme/image.php/moove/assign/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="/PySano/UVA1">Tarea 2 - Programas Secuenciales</a>
                         </div>
                         <div className='video-container'>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HvReNhnlvCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pu2bznIFfY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         </div>
                     </div>
@@ -235,4 +269,4 @@ const UVA3 = () => {
   )
 }
 
-export default UVA3
+export default UVA2

@@ -106,7 +106,9 @@ const Home = () => {
                             </a>
                         </li>
                         <li className='clickable'>
+                            <a href='/UVA2'>
                             Unidad 2
+                            </a>
                         </li>
                         <li className='clickable'>
                             <a href='/UVA3'>

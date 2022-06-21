@@ -1,11 +1,10 @@
 export const QuestionReducer = (state, action) => {
     switch (action.type) {
-        case 'ADD_QUESTION':
-            return [...state, action.payload];
-        case 'REMOVE_QUESTION':
-            return state.filter(question => question.id !== action.payload);
-        case 'UPDATE_QUESTIONS':
-            return action.payload;
+        case 'ADD_UVA_QUESTIONS':
+            return {
+                ...state,
+                [action.payload.uva]: action.payload.questions
+            }
         default:
             return state;
     }

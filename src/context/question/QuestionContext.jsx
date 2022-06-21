@@ -2,31 +2,38 @@ import { createContext, useReducer } from "react";
 import { QuestionReducer } from "./QuestionReducer";
 
 
-const defaultQuestionState = [];
+const defaultQuestionState = {
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+}
 
 export const QuestionContext = createContext();
 
 export const QuestionProvider = ({ children }) => {
     const [questions, dispatch] = useReducer(QuestionReducer, defaultQuestionState);
 
-    const updateQuestions = (questions) => {
-        dispatch({ type: 'UPDATE_QUESTIONS', payload: questions });
-    }
-
-    const addQuestion = question => {
-        dispatch({ type: 'ADD_QUESTION', payload: question });
-    }
-
-    const removeQuestion = id => {
-        dispatch({ type: 'REMOVE_QUESTION', payload: id });
-    }
+    const addUvaQuestions = (uva, questions) => {
+        dispatch({
+            type: "ADD_UVA_QUESTIONS",
+            payload: {
+                uva,
+                questions
+            }
+        })
+    };
 
     return (
         <QuestionContext.Provider value={{ 
             questions,
-            updateQuestions,
-            addQuestion,
-            removeQuestion
+            addUvaQuestions,
         }}>
             {children}
         </QuestionContext.Provider>

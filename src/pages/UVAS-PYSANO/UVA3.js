@@ -2,28 +2,30 @@ import React, {useEffect, useState, useContext} from 'react'
 import { Table } from '@mantine/core';
 import axios from 'axios';
 import { UserContext } from '../../context/user/UserContext';
+import { QuestionContext } from '../../context/question/QuestionContext';
 
 const UVA1 = () => {
 
-  const [questions, setQuestions] = useState([]);
+  const uva = 3
   const {user} = useContext(UserContext);
+  const { questions, addUvaQuestions} = useContext(QuestionContext);
 
   useEffect(() => {
     const fetchdata = async () => {
       const result = await axios.get('http://127.0.0.1:8000', {
         params: {
           student: user.rol,
-          uva: 3
+          uva: uva
         }
       });
-      setQuestions(result.data);
+      addUvaQuestions(uva, result.data);
     }
     fetchdata();
-  }, [user]);
+  }, []);
 
-  const rows = questions.map((question) => (
+  const rows = questions[uva].map((question) => (
     <tr key={question.id}>
-      <a href={"/PySano/UVA1/" + question.id}>
+      <a href={"/PySano/UVA" + uva + "/" + question.id}>
         <td className='table-name-tag'>
         <span className='table-name'>{question.title}</span>
         <span className='table-tags'>tags: {question.category_info}</span>

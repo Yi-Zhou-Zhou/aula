@@ -21,8 +21,15 @@ import {BsListUl} from "react-icons/bs"
 import {GoBook} from "react-icons/go"
 import Unidad2 from "../../imgs/Unidad2.png"
 import CapsulasVideo from "../../imgs/Capsulas.png"
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../context/user/UserContext';
+import { showNotification } from '@mantine/notifications';
 
 const UVA2 = () => {
+
+    const {user,updateRol} = useContext(UserContext)
+
   return (
     <>
     <nav className='navbar'>
@@ -36,7 +43,14 @@ const UVA2 = () => {
                 <TbWorld/>
                 <VscBell/>
                 <IoChatbubbleOutline/>
-                <div className='user'>
+                <div className='user' onClick={() => {
+                    user.rol === "201873081-0" ? updateRol("201873027-0") : updateRol("201873081-0")
+                    showNotification({
+                        color: "green",
+                        title: 'Usuario cambiado exitosamente',
+                        message: 'Usuario actual con Rol: ' + user.rol,
+                      })
+                }} >
                 <FaUserCircle/>
                 <IoMdArrowDropdown/>
                 </div>
@@ -107,19 +121,19 @@ const UVA2 = () => {
                             </a>
                         </li>
                         <li className='clickable'>
-                            <a href='/UVA1'>
+                            <Link to='/UVA1'>
                             Unidad 1
-                            </a>
+                            </Link>
                         </li>
                         <li className='active clickable'>
-                            <a href="/UVA2">
+                            <Link to="/UVA2">
                             Unidad 2
-                            </a>
+                            </Link>
                         </li>
                         <li className='clickable'>
-                            <a href='/UVA3'>
+                            <Link to='/UVA3'>
                             Unidad 3
-                            </a>
+                            </Link>
                         </li>
                         <li className='clickable'>
                             Unidad 4
@@ -171,7 +185,8 @@ const UVA2 = () => {
                         </div>
                         <img src={heroResourcesImg} className='hero-info-img' alt='Hero Information Image'/>
                         <div className='link-section'>
-                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img><a href="/PySano/UVA2">PySano</a>
+                                <img src='https://aula.usm.cl/theme/image.php/moove/url/1655227420/icon' alt="Noticias-logo" className='hero-logo'></img>
+                                <Link to="/PySano/UVA2">PySano</Link>
                         </div>  
                         <div className='hero-info-details'>
                             <img src={CapsulasVideo} alt="Capsulas-video-logo"/>

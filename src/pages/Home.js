@@ -15,10 +15,10 @@ import heroHeaderImg from "../imgs/informationHeader.png";
 import heroInfoImg from "../imgs/information.png";
 import {BsListUl} from "react-icons/bs"
 import {GoBook} from "react-icons/go"
+import { useContext } from 'react';
+import { UserContext } from '../context/user/UserContext';
 
 const Home = () => {
-    
-    
   return (
     <>
     <nav className='navbar'>

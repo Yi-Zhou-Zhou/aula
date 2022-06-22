@@ -13,6 +13,7 @@ import { NotificationsProvider } from '@mantine/notifications';
 // context
 import { UserProvider } from "./context/user/UserContext";
 import { QuestionProvider } from './context/question/QuestionContext';
+import Exercises from './pages/Exercises';
 
 function App() {
   return (
@@ -24,11 +25,13 @@ function App() {
           <Route path='/' element={<Home/>}/>z
           <Route path="/UVA1" element={<UVA1_AULA/>}/>
           <Route path="/UVA2" element={<UVA2_AULA/>}/>
-          <Route path="/UVA3" element={<UVA3_AULA/  >}/>
+          <Route path="/UVA3" element={<UVA3_AULA/>}/>
           <Route path='/PySano' element={<PySano/>}/>
           <Route path='/PySano/UVA1' element={<UVA1/>}/>
           <Route path='/PySano/UVA2' element={<UVA2/>}/>
           <Route path='/PySano/UVA3' element={<UVA3/>}/>
+          <Route path='/PySano/:uva_id/:exercise_id' element={<Exercises/>}/>
+          
         </Routes>
         
       </Router>

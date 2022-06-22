@@ -25,9 +25,7 @@ import { UserContext } from '../../context/user/UserContext';
 import { showNotification } from '@mantine/notifications';
 
 const UVA3 = () => {
-
     const {user,updateRol} = useContext(UserContext)
-    
   return (
     <>
     <nav className='navbar'>
@@ -124,12 +122,12 @@ const UVA3 = () => {
                             </Link>
                         </li>
                         <li className='clickable'>
-                            <Link href="/UVA2">
+                            <Link to="/UVA2">
                             Unidad 2
                             </Link>
                         </li>
                         <li className='active clickable'>
-                            <Link href='/UVA3'>
+                            <Link to='/UVA3'>
                             Unidad 3
                             </Link>
                         </li>

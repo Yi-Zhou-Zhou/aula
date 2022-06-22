@@ -405,13 +405,16 @@ Main content
     
 }
 
-.exercise .title{
-    font-size: 30px;
+.exercise-title{
+    font-size: 14px;
     gap: 0.8rem;
     display: flex; 
     align-items: center;
+    width: 100%;
     margin-bottom: 0.23rem;
     font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 
 }
 
@@ -419,8 +422,9 @@ Main content
     font-size: 26px;
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .rating span:nth-child(2){
@@ -435,12 +439,14 @@ Main content
     margin-bottom: 2rem;
 }
 
-.description-pysano h3{
+.description-pysano p{
     font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .input, .output{
     background-color: rgb(194, 194, 194);
+    margin-bottom: 1rem;
 }
 
 .solution{
@@ -456,11 +462,19 @@ Main content
     margin-right: 2rem;
     font-size: 15px;
     outline: none;
+    width: 10%;
+    text-align: center;
+    background-color: white;
+    color: black;
 }
 
 .solution textarea{
     height: 300px;
     width: 100%;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
@@ -471,10 +485,6 @@ Main content
     margin-bottom: 2rem;
 }
 
-.submit-btns button{
-    height: 2.4rem;
-    width: 5rem;
-}
 
   
 .hero-header-img-uva{
@@ -602,4 +612,8 @@ Main content
   font-family: 'Poppins', sans-serif;
   margin-bottom: 2rem;
   text-transform: uppercase;
+}
+
+.example{
+  margin-bottom: 1rem;
 }

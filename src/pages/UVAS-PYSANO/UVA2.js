@@ -4,9 +4,9 @@ import axios from 'axios';
 import { UserContext } from '../../context/user/UserContext';
 import { QuestionContext } from '../../context/question/QuestionContext';
 
-const UVA3 = () => {
+const UVA2 = () => {
 
-  const uva = 3
+  const uva = 2
   const {user} = useContext(UserContext);
   const { questions, addUvaQuestions} = useContext(QuestionContext);
 
@@ -73,4 +73,4 @@ const UVA3 = () => {
   )
 }
 
-export default UVA3
+export default UVA2

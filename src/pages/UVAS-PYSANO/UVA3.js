@@ -4,7 +4,7 @@ import axios from 'axios';
 import { UserContext } from '../../context/user/UserContext';
 import { QuestionContext } from '../../context/question/QuestionContext';
 import { Link } from "react-router-dom";
-
+import { Badge } from '@mantine/core';
 const UVA3 = () => {
 
   const uva = 3
@@ -27,11 +27,11 @@ const UVA3 = () => {
   const recommendedClassName = (recommended) => {
     switch (recommended) {
       case 'Recomendado':
-        return 'table-recommended-recommended';
+        return {from: "#3624F8", to: "#07088C"};
       case 'Fácil':
-        return 'table-recommended-easy';
+        return {from: "#24F86D", to: "#0DB52A"};
       case 'Difícil':
-        return 'table-recommended-hard';
+        return {from: "orange", to: "red"};
       default:
         return '';
     }
@@ -46,7 +46,9 @@ const UVA3 = () => {
         </td>
       </Link>
       <td>{question.difficulty}</td>
-      <td className={recommendedClassName(question.recommended)}>{question.recommended}</td>
+      <td>
+      <Badge variant='gradient' gradient={recommendedClassName(question.recommended)}>{question.recommended}</Badge>
+      </td>
       <td> {question.done}</td>
     </tr>
   ));

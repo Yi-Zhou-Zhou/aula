@@ -74,7 +74,7 @@ const Exercises = () => {
                 </Button>
 
                 <Button color={"green"} leftIcon={<MdUpgrade size={20} />}>
-                    Probar
+                    Enviar
                 </Button>
                 
             </div>

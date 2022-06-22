@@ -24,6 +24,19 @@ const UVA3 = () => {
     fetchdata();
   }, []);
 
+  const recommendedClassName = (recommended) => {
+    switch (recommended) {
+      case 'Recomendado':
+        return 'table-recommended-recommended';
+      case 'Fácil':
+        return 'table-recommended-easy';
+      case 'Difícil':
+        return 'table-recommended-hard';
+      default:
+        return '';
+    }
+  }
+
   const rows = questions[uva].map((question) => (
     <tr key={question.id}>
       <Link to={`/PySano/UVA${uva}/${question.id}`}>
@@ -32,8 +45,8 @@ const UVA3 = () => {
         <span className='table-tags'>tags: {question.category_info}</span>
         </td>
       </Link>
-      <td className={question.difficulty <= 200 ? "table-rating-easy": "table-rating-medium"}>{question.difficulty}</td>
-      <td>{question.recommended}</td>
+      <td>{question.difficulty}</td>
+      <td className={recommendedClassName(question.recommended)}>{question.recommended}</td>
       <td> {question.done}</td>
     </tr>
   ));

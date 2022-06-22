@@ -5,16 +5,27 @@ import {MdUpgrade} from "react-icons/md"
 import { Button } from '@mantine/core';
 
 import {useParams, Link, Navigate} from 'react-router-dom'
+import { UserContext } from '../context/user/UserContext'
 import { QuestionContext } from '../context/question/QuestionContext';
+import axios from 'axios'
 
 const Exercises = () => {
     const {uva_id, exercise_id} = useParams()
     const uva_num = parseInt(uva_id.substring(3))
     const {questions} = useContext(QuestionContext)
+    const {user} = useContext(UserContext)
     if (questions[uva_num].length === 0)
         return <Navigate to={`/PySano/${uva_id}`}/>
     const question = questions[uva_num].find(question => question.id == exercise_id)
-    console.log(question)
+
+
+    const increaseScore = async () => {
+        await axios.put(`http://127.0.0.1:8000/correct?student=${user.rol}&uva=${uva_num}`)
+    }
+
+    const decreaseScore = async () => {
+        await axios.put(`http://127.0.0.1:8000/incorrect?student=${user.rol}&uva=${uva_num}`)
+    }
 
   return (
     <div>
@@ -90,11 +101,11 @@ const Exercises = () => {
             </div>
             
             <div className='submit-btns'>
-                <Button color={"yellow"} leftIcon={<GrConfigure size={20} color="white"/>}>
+                <Button onClick={decreaseScore} color={"yellow"} leftIcon={<GrConfigure size={20} color="white"/>}>
                     Probar
                 </Button>
 
-                <Button color={"green"} leftIcon={<MdUpgrade size={20} />}>
+                <Button onClick={increaseScore} color={"green"} leftIcon={<MdUpgrade size={20} />}>
                     Enviar
                 </Button>
                 

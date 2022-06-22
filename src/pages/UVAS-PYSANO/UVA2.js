@@ -3,6 +3,7 @@ import { Table } from '@mantine/core';
 import axios from 'axios';
 import { UserContext } from '../../context/user/UserContext';
 import { QuestionContext } from '../../context/question/QuestionContext';
+import { Link } from 'react-router-dom';
 
 const UVA2 = () => {
 
@@ -25,12 +26,12 @@ const UVA2 = () => {
 
   const rows = questions[uva].map((question) => (
     <tr key={question.id}>
-      <a href={"/PySano/UVA" + uva + "/" + question.id}>
+      <Link to={`/PySano/UVA${uva}/${question.id}`}>
         <td className='table-name-tag'>
         <span className='table-name'>{question.title}</span>
         <span className='table-tags'>tags: {question.category_info}</span>
         </td>
-      </a>
+      </Link>
       <td className={question.difficulty <= 200 ? "table-rating-easy": "table-rating-medium"}>{question.difficulty}</td>
       <td>{question.recommended}</td>
       <td> {question.done}</td>
@@ -44,16 +45,16 @@ const UVA2 = () => {
         <div class="logo">
             <h2>PySano</h2>
         </div>
-        <a className='uva-link' href='/PySano/UVA1'>UVA 1</a>
-        <a className='uva-link' href='UVA2'>UVA 2</a>
-        <a className='uva-link' href='UVA3'>UVA 3</a>
-        <a className='uva-link' href='UVA4'>UVA 4</a>
-        <a className='uva-link' href='UVA5'>UVA 5</a>
-        <a className='uva-link' href='UVA6'>UVA 6</a>
-        <a className='uva-link' href='UVA7'>UVA 7</a>
-        <a className='uva-link' href='UVA8'>UVA 8</a>
-        <a className='uva-link' href='UVA9'>UVA 9</a>
-        <a className='uva-link' href='UVA10'>UVA 10</a> 
+        <Link className='uva-link' to="/PySano/UVA1"> UVA 1 </Link>
+        <Link className='uva-link' to="/PySano/UVA2"> UVA 2 </Link>
+        <Link className='uva-link' to="/PySano/UVA3"> UVA 3 </Link>
+        <Link className='uva-link' to="/PySano/UVA4"> UVA 4 </Link>
+        <Link className='uva-link' to="/PySano/UVA5"> UVA 5 </Link>
+        <Link className='uva-link' to="/PySano/UVA6"> UVA 6 </Link>
+        <Link className='uva-link' to="/PySano/UVA7"> UVA 7 </Link>
+        <Link className='uva-link' to="/PySano/UVA8"> UVA 8 </Link>
+        <Link className='uva-link' to="/PySano/UVA9"> UVA 9 </Link>
+        <Link className='uva-link' to="/PySano/UVA10"> UVA 10 </Link>
     </nav>
     <main className='table-content'>
     <h1 className='table-header'>Lista de ejercicios</h1>

@@ -40,11 +40,12 @@ const UVA3 = () => {
                 <VscBell/>
                 <IoChatbubbleOutline/>
                 <div className='user' onClick={() => {
-                    user.rol === "201873081-0" ? updateRol("201873027-0") : updateRol("201873081-0")
+                    const newRol = user.rol === "201873081-0" ? "201873027-0" : "201873081-0"
+                    updateRol(newRol)
                     showNotification({
                         color: "green",
                         title: 'Usuario cambiado exitosamente',
-                        message: 'Usuario actual con Rol: ' + user.rol,
+                        message: 'Usuario actual con Rol: ' + newRol,
                       })
                 }} >
                 <FaUserCircle/>
